@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #FAF8F5 0%, #EADBC8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            text-align: center;
+            color: #3D2817;
+        }
+        h1 {
+            font-size: 96px;
+            font-weight: 700;
+            margin: 0;
+            color: #7B4B28;
+        }
+        p {
+            font-size: 36px;
+            margin: 20px 0;
+            color: #5A3921;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(9, 40px);
+            gap: 2px;
+            margin: 30px auto;
+            border: 3px solid #7B4B28;
+            width: fit-content;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .cell {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #EADBC8;
+            font-size: 24px;
+            font-weight: 600;
+            color: #3D2817;
+        }
+        .badge {
+            background: #7B4B28;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 24px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku</h1>
+        <p>Play onchain. Compete globally.</p>
+        <div class="grid">
+            <div class="cell">5</div><div class="cell"></div><div class="cell">3</div>
+            <div class="cell"></div><div class="cell">7</div><div class="cell"></div>
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            
+            <div class="cell">6</div><div class="cell"></div><div class="cell"></div>
+            <div class="cell">1</div><div class="cell">9</div><div class="cell">5</div>
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            
+            <div class="cell"></div><div class="cell">9</div><div class="cell">8</div>
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            <div class="cell"></div><div class="cell">6</div><div class="cell"></div>
+        </div>
+        <div class="badge">Built on Base</div>
+    </div>
+</body>
+</html>
