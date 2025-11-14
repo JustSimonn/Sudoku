@@ -176,18 +176,18 @@ function SudokuBoard({ difficulty, onNewGame }) {
   if (!board) return <div>Loading...</div>;
 
   return (
-    <div className="flex flex-col items-center" onKeyDown={handleKeyDown} tabIndex={0}>
+    <div className="flex flex-col items-center w-full" onKeyDown={handleKeyDown} tabIndex={0}>
       {/* Stats */}
-      <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-6 text-base font-medium w-full justify-center">
-        <div className="bg-white px-4 py-2 rounded-lg shadow-soft border border-brown-200">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 mb-4 sm:mb-6 text-sm sm:text-base font-medium w-full justify-center">
+        <div className="bg-white px-3 sm:px-4 py-2 rounded-lg shadow-soft border border-brown-200 text-center">
           <span className="text-brown-600">Time: </span>
           <span className="text-brown-800 font-semibold">{formatTime(elapsedTime)}</span>
         </div>
-        <div className="bg-white px-4 py-2 rounded-lg shadow-soft border border-brown-200">
+        <div className="bg-white px-3 sm:px-4 py-2 rounded-lg shadow-soft border border-brown-200 text-center">
           <span className="text-brown-600">Difficulty: </span>
           <span className="text-brown-800 font-semibold">{difficulty}</span>
         </div>
-        <div className="bg-white px-4 py-2 rounded-lg shadow-soft border border-brown-200">
+        <div className="bg-white px-3 sm:px-4 py-2 rounded-lg shadow-soft border border-brown-200 text-center">
           <span className="text-brown-600">Hints: </span>
           <span className={`font-semibold ${hintsUsed >= maxHints ? 'text-red-600' : 'text-brown-800'}`}>
             {hintsUsed}/{maxHints}
@@ -196,7 +196,7 @@ function SudokuBoard({ difficulty, onNewGame }) {
       </div>
 
       {/* Sudoku Grid */}
-      <div className="inline-block border-3 border-brown-700 mb-6 rounded-lg overflow-hidden shadow-medium bg-white">
+      <div className="inline-block border-3 border-brown-700 mb-4 sm:mb-6 rounded-lg overflow-hidden shadow-medium bg-white max-w-full">
         {board.map((row, rowIndex) => (
           <div key={rowIndex} className="flex">
             {row.map((cell, colIndex) => {
@@ -211,7 +211,7 @@ function SudokuBoard({ difficulty, onNewGame }) {
                   key={colIndex}
                   onClick={() => handleCellClick(rowIndex, colIndex)}
                   className={`
-                    w-11 h-11 sm:w-14 sm:h-14 flex items-center justify-center text-lg sm:text-xl font-medium cursor-pointer
+                    w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center text-base sm:text-lg md:text-xl font-medium cursor-pointer
                     border border-brown-300
                     ${isBottomBorder ? 'border-b-2 border-b-brown-700' : ''}
                     ${isRightBorder ? 'border-r-2 border-r-brown-700' : ''}
@@ -231,19 +231,19 @@ function SudokuBoard({ difficulty, onNewGame }) {
       </div>
 
       {/* Number Pad */}
-      <div className="flex gap-2 mb-6 flex-wrap justify-center">
+      <div className="flex gap-1.5 sm:gap-2 mb-4 sm:mb-6 flex-wrap justify-center max-w-full px-2">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
           <button
             key={num}
             onClick={() => handleNumberInput(num)}
-            className="w-11 h-11 sm:w-12 sm:h-12 bg-brown-600 text-white rounded-lg font-semibold text-lg hover:bg-brown-700 hover:shadow-medium active:scale-95 transition-all shadow-soft"
+            className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-brown-600 text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-brown-700 hover:shadow-medium active:scale-95 transition-all shadow-soft"
           >
             {num}
           </button>
         ))}
         <button
           onClick={() => handleNumberInput(0)}
-          className="w-11 h-11 sm:w-12 sm:h-12 bg-brown-400 text-white rounded-lg font-semibold text-lg hover:bg-brown-500 hover:shadow-medium active:scale-95 transition-all shadow-soft"
+          className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-brown-400 text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-brown-500 hover:shadow-medium active:scale-95 transition-all shadow-soft"
         >
           ✕
         </button>
