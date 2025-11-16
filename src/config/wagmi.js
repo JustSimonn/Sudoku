@@ -3,7 +3,7 @@ import { base } from 'wagmi/chains';
 
 export const config = getDefaultConfig({
   appName: 'Sudoku',
-  projectId: 'YOUR_PROJECT_ID', // Get from WalletConnect Cloud
+  projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || 'YOUR_PROJECT_ID', // Get from WalletConnect Cloud
   chains: [base], // Base mainnet only
-  ssr: false,
+  ssr: true, // Enable SSR for Vercel
 });
