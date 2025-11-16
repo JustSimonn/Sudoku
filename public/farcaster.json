@@ -1,0 +1,20 @@
+{
+  "frame": {
+    "name": "Sudoku",
+    "version": "1",
+    "iconUrl": "https://sudoku-base.vercel.app/icon.png",
+    "homeUrl": "https://sudoku-base.vercel.app",
+    "imageUrl": "https://sudoku-base.vercel.app/image.png",
+    "splashImageUrl": "https://sudoku-base.vercel.app/splash.png",
+    "splashBackgroundColor": "#FFFFFF",
+    "webhookUrl": "https://sudoku-base.vercel.app/api/webhook",
+    "subtitle": "Sudoku Game on Base Blockchain",
+    "description": "Play Sudoku on Base",
+    "primaryCategory": "games"
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjcyNzU1MSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDJCZmUzM2FlYTM2YmIxMDgwYUZlMjYwNGM4NDM2RWQxOUE0ZjhGQzEifQ",
+    "payload": "eyJkb21haW4iOiJzdWRva3UtYmFzZS52ZXJjZWwuYXBwIn0",
+    "signature": "JDjer8VgLwuOrVq1dZPr7s3OUTiBnw/0UNfG6zFqF4gNVw3UYKcBFgu6J82q7YaDqeNgLPlWl8bN811UtEVb5xs="
+  }
+}
